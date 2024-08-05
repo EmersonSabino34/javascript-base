@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+</head>
+<body>
+    <h1 class="titulo">Validar formulario</h1>
+
+    <form>
+        
+        <input type="text" placeholder="nome"  id="nome" name="nome">
+        <input type="text" placeholder="idade" id="idade" name="idade" >
+
+        <input type="text" placeholder="cep"    id="cep">
+        <input type="text" placeholder="estado" id="estado">
+        <input type="text" placeholder="cidade" id="cidade">
+        <input type="text" placeholder="bairro" id="bairro">
+        <input type="text" placeholder="logradouro" id="logradouro">
+
+        <button id="btn" onclick="cadastrar()">Cadastrar</button>
+    </form>
+
+    <script>
+        
+        var nome = document.getElementById("nome")
+        var idade = document.getElementById("idade")
+        var cep = document.getElementById("cep") 
+        var estado = document.getElementById("estado")
+
+        var cidade = document.querySelector("#cidade")
+        var bairro = document.querySelector("#bairro")
+
+        var logradouro = document.querySelector("#logradouro") // seletor de id
+
+        var titulo = document.querySelector(".logradouro") // seletor de classe
+        var titulo2 = document.querySelector("h1") // seletor de tag
+
+        /**
+         * .text
+         * .htmlElemnt
+        */
+
+        var btn = document.getElementById("btn")
+
+        function cadastrar(){
+            titulo2.textContent = "Já era"
+            alert(titulo2.textContent)
+            console.log(titulo2.value)
+        }
+
+        btn.addEventListener("click", function(event) {
+            event.preventDefault()
+
+            cadastrar()
+
+        })
+    </script>
+</body>
+</html>

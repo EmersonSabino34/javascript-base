@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+</head>
+<body>
+    <h1 class="titulo">Validar formulario 2</h1>
+
+    <form>
+        
+        <fieldset>
+            <legend>Principal</legend>
+
+            <label>Idade:</label><br>
+            <input type="text" placeholder="nome"  id="nome"> <br><br>
+            
+            <label>Idade:</label><br>
+            <input type="text" placeholder="idade" id="idade"> <br><br>
+
+            <label>E-mail:</label><br>
+            <input type="email" placeholder="E-mail" id="email">
+        </fieldset>
+        
+        <br><br>
+        <fieldset>
+
+            <legend>Endereço</legend>
+
+            <label>Idade:</label><br>
+            <input type="text" placeholder="cep"    id="cep"> <br> <br>
+
+            <label>Estado:</label><br>
+            <input type="text" placeholder="estado" id="estado"> <br> <br>
+
+            <label>Cidade:</label><br>
+            <input type="text" placeholder="cidade" id="cidade"> <br> <br>
+
+            <label>Bairro:</label><br>
+            <input type="text" placeholder="bairro" id="bairro"> <br> <br>
+
+            <label>Logradouro:</label><br>
+            <input type="text" placeholder="logradouro" id="logradouro">
+
+        </fieldset>
+        <br>
+        <button id="btn">Cadastrar</button>
+    </form>
+
+    <script>
+        
+        var nome = document.getElementById("nome")
+        var idade = document.getElementById("idade")
+        
+
+        
+        var cep = document.getElementById("cep") 
+        var estado = document.getElementById("estado")
+        var cidade = document.querySelector("#cidade")
+        var bairro = document.querySelector("#bairro")
+        var logradouro = document.querySelector("#logradouro") // seletor de id
+
+        /**
+         * .text
+         * .htmlElemnt
+        */
+
+        var btn = document.getElementById("btn")
+
+        function validar(){
+            var email = document.getElementById("email").value
+
+            if( nome.value == "" ){
+                alert("Preencher o campo nome")
+                return false;
+            }
+
+            if( idade.value == "" ){
+                alert("Preencher o campo idade")
+                return false;
+            }
+
+            if( !email ){
+                alert("Preencher o campo e-mail")
+                return false;
+            }
+
+            if( !email.includes('@') ){
+                alert("E-mail inválido")
+                return false;
+            }
+
+            cadastrar()
+            
+        }
+
+
+        function cadastrar(){
+            alert("Cadastrado com sucesso")
+        }
+
+        btn.addEventListener("click", function(event) {
+            event.preventDefault()
+
+            validar()
+            
+
+        })
+    </script>
+</body>
+</html>
