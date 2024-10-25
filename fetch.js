@@ -44,3 +44,17 @@ async function deleteCategoriaSearchParam() {
     })
     .then((data) => { console.log(data)})
 }
+
+// exemplo 3
+async function deleteCategoriaSearchParam2() {
+    return fetch(url + new URLSearchParams({
+        id: "5"
+    }), { 
+        method: "DELETE", 
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => { console.log(data)})
+}
