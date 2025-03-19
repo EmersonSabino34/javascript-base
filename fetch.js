@@ -5,8 +5,8 @@ async function getCagetoria(){
             //console.log(response);
             return response.json();
         }).then((data) => {
-            console.log(data)
-            return data
+            console.log(data);
+            return data;
         });
 }
 
