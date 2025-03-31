@@ -8,6 +8,10 @@ setTimeout( () => {
   alert('hello world')
 },)
 
+setTimeout( () => {
+  alert('hello world')
+},)
+
 if(admin == "admin"){
   console.log("Hello admin")
 }else{
